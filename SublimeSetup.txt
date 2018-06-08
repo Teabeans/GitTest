@@ -1,0 +1,10 @@
+Sublime Text 3 - Initial Setup
+  |--To acquire Package Control:
+  |  |--Press Ctrl+Shift+P
+  |  |--Type 'package control'
+  |  |--Select 'Install Package Control'
+  |     |--Upon install completion, Package Control behaves similar to an app store in Sublime
+  |
+  |--To open the Side Bar:
+  |  |--Click 'View'
+     |--'Show Open Files'
