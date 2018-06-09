@@ -7,7 +7,7 @@ Sublime Text 3 - Initial Setup
 |
 |--To open the Side Bar:
 |  |--Click 'View'
-|   |--'Show Open Files'
+|  |--'Show Open Files'
 |
 |--To open the Package Manager
 |  |--Press Ctrl + Shift + P
@@ -18,10 +18,86 @@ Sublime Text 3 - Initial Setup
 |  |  |--Assists with typing of html
 |  |--SublimeCodeIntel
 |  |--MaterialTheme
-|     |--Improves the appearance of Sublime Text
+|  |  |--Improves the appearance of Sublime Text
+|  |--SideBarEnhancements
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 |          
 |--To activate a theme
-   |--Go to Preferences => Color Scheme...
-   |--OR press Ctrl + Shift + P
+|  |--Go to Preferences => Color Scheme...
+|  |--OR press Ctrl + Shift + P
+|
+|--To adjust MaterialTheme
+|  |--Press Ctrl + Shift + P
+|  |--Type "Material Theme"
+|  |--Select Material Theme: Configuration
+|
+|--To acquire additional fonts
+|  |--$ sudo apt get install ttf-google-fonts-git
+|
+|--To adjust visual settings of Sublime Text:
+|  |--Preferences => Settings
+|  |--These are preferences, but my settings are as follows:
+|  |--BEGIN PREFERENCES:
 
+{
+    "always_show_minimap_viewport": true,
+    "auto_indent": false,
+    "auto_match_enabled": false,
+    "bold_folder_labels": true,
+    "caret_style": "phase", // Valid values are "smooth", "phase", "blink" and "solid".
+    "caret_extra_top": 4,
+    "caret_extra_bottom": 4,
+    "caret_extra_width": 1,
+    "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+    "copy_with_empty_selection": false,
+    "default_line_ending": "unix",
+    "drag_text": false,
+    "draw_minimap_border": true,
+    "draw_white_space": "all",
+    "fold_buttons": true, // Fold buttons are the triangles shown in the gutter to fold regions of text
+    "fade_fold_buttons": false, // Hides the fold buttons unless the mouse is over the gutter
+    "font_face": "Iosevka",
+    "font_size": 10,
+    "gutter": true, // Set to false to hide the gutter altogether
+    "highlight_line": true,
+    "highlight_modified_tabs": true, // Makes tabs with modified files more visible
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "indent_guide_options": ["draw_active"],
+    "line_padding_top": 0, // Additional spacing at the top of each line, in pixels
+    "line_padding_bottom": 0, // Additional spacing at the bottom of each line, in pixels
+    "margin": -10, // Spacing between the gutter and the text
+    "material_theme_accent_scrollbars": true,
+    "material_theme_accent_yellow": true,
+    "material_theme_bold_tab": true,
+    "material_theme_compact_sidebar": true,
+    "material_theme_contrast_mode": true,
+    "material_theme_small_statusbar": true,
+    "material_theme_small_tab": true,
+    "material_theme_tabs_separator": true,
+    "rulers": [4, 8, 12, 16, 80], // Columns in which to display vertical rulers
+    "show_line_endings": true, // Display line endings in the status bar
+    "save_on_focus_lost": true,
+    "show_encoding": true,
+    "show_tab_close_buttons": false,
+    "tab_size": 4, // The number of spaces a tab is considered equal to
+    "translate_tabs_to_spaces": true,
 
+    "theme": "Material-Theme-Darker.sublime-theme"
+}
+
+|  |--END PREFERENCES:
+|
+|
