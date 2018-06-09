@@ -1,10 +1,27 @@
 Sublime Text 3 - Initial Setup
-  |--To acquire Package Control:
-  |  |--Press Ctrl+Shift+P
-  |  |--Type 'package control'
-  |  |--Select 'Install Package Control'
-  |     |--Upon install completion, Package Control behaves similar to an app store in Sublime
-  |
-  |--To open the Side Bar:
-  |  |--Click 'View'
-     |--'Show Open Files'
+|--To acquire Package Control:
+|  |--Press Ctrl + Shift + P
+|  |--Type 'package control'
+|  |--Select 'Install Package Control'
+|     |--Upon install completion, Package Control behaves similar to an app store in Sublime
+|
+|--To open the Side Bar:
+|  |--Click 'View'
+|   |--'Show Open Files'
+|
+|--To open the Package Manager
+|  |--Press Ctrl + Shift + P
+|  |--Select Package Control : Install Package
+|
+|--Recommended Packaged
+|  |--Emmet
+|  |  |--Assists with typing of html
+|  |--SublimeCodeIntel
+|  |--MaterialTheme
+|     |--Improves the appearance of Sublime Text
+|          
+|--To activate a theme
+   |--Go to Preferences => Color Scheme...
+   |--OR press Ctrl + Shift + P
+
+
