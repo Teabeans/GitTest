@@ -9,7 +9,7 @@ Sublime Text 3 - Initial Setup
 |  |--Click 'View'
 |  |--'Show Open Files'
 |
-|--To open the Package Manager
+|--To open the Package Manager in order to install additional packages...
 |  |--Press Ctrl + Shift + P
 |  |--Select Package Control : Install Package
 |
@@ -20,10 +20,12 @@ Sublime Text 3 - Initial Setup
 |  |--MaterialTheme
 |  |  |--Improves the appearance of Sublime Text
 |  |--SideBarEnhancements
-|
-|
-|
-|
+|  |  |--
+|  |--Advanced New File
+|  |--GitGutter
+|  |--Dockblkr
+|  |--SublimeLint
+      |--Various flavors - Find the one for what you're writing in
 |
 |
 |
