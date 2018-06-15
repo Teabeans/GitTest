@@ -34,9 +34,83 @@ Use the Package Manager to install Git:
    |--Close and reopen command prompt to effect changes
 
 Use Git to Clone a repository:
+|
 |--May require authentication in the form of an SSH key pair
-   |--https://en.wikipedia.org/wiki/Secure_Shell
-|--Open a command prompt
+|  |--https://en.wikipedia.org/wiki/Secure_Shell
+|  |--https://en.wikipedia.org/wiki/Secure_Shell#Key_management
+|  |--https://en.wikipedia.org/wiki/Ssh-keygen
+|
+|--Generate an SSH keypair
+|
+|--Upload the SSH public key to the Git repository (in this case, GitLab or GitHub)
+|  |--Upon a request to sync/push/clone/etc, the repository will ask for authentication
+|  |--Authentication will be provided by the local machine using its private key
+|  |--On GitLab:
+|     |--'Settings'
+|     |--'SSH Keys'
+|     |--Copy contents of public key to field (id_rsa.pub)
+|     |--Add title
+|
+|--Direct local Git to relevant SSH private keypair
+|  |--https://gist.github.com/bsara/5c4d90db3016814a3d2fe38d314f9c23
+|  |--At the root user home folder (ie: C:/Users/<Your User Name>), create the following files:
+|  |  |--.ssh/config
+|  |  |--.bash_profile
+|  |  |--.bashrc
+|  |--If Windows prevents you from generating an empty filename via the GUI or CMD interface:
+|  |  |--Open Notepad, save the new file as:
+|  |  |--An "All files" type (*.*)
+|  |  |--'.<extension goes here>'
+|  |--Add the following text to the .ssh/config file
+
+Host github.com
+ Hostname github.com
+ IdentityFile ~/.ssh/id_rsa
+
+|  |--Enable SSH Agent startup whenever Git Bash is started
+      |--Add the following text to the .bash_profile file
+
+test -f ~/.profile && . ~/.profile
+test -f ~/.bashrc && . ~/.bashrc
+
+|     |--Add the following text to the .bashrc file
+
+# Start SSH Agent
+#----------------------------
+
+SSH_ENV="$HOME/.ssh/environment"
+
+function run_ssh_env {
+  . "${SSH_ENV}" > /dev/null
+}
+
+function start_ssh_agent {
+  echo "Initializing new SSH agent..."
+  ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+  echo "succeeded"
+  chmod 600 "${SSH_ENV}"
+
+  run_ssh_env;
+
+  ssh-add ~/.ssh/id_rsa;
+}
+
+if [ -f "${SSH_ENV}" ]; then
+  run_ssh_env;
+  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+    start_ssh_agent;
+  }
+else
+  start_ssh_agent;
+fi
+
+|
+|--Open a GitBash prompt (installed when Git was installed)
 |--Enter the relevant command
-   |--> git clone <HTTP address goes here>
-      |--Address may not contain special characters, must be URL formatted
+|  |--> git clone <HTTP address goes here>
+|     |--Address may not contain special characters, must be URL formatted
+|--Enter relevant credentials when prompted
+   |--Username:
+   |--Password:
+
+Magical things with pyenv, install python, configure GitBash paths, etc.
