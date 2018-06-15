@@ -1,0 +1,42 @@
+Purpose: To setup a Git (https://en.wikipedia.org/wiki/Git) pipeline
+
+In Windows:
+|--Select and install package manager (https://en.wikipedia.org/wiki/Package_manager)
+|  |--Chocolatey
+|  |  |--Built atop NuGet
+|  |  |--https://chocolatey.org/
+|  |  |--Open an ADMINISTRATIVE command prompt
+|  |  |  |--Windows+X
+|  |  |  |--Command Prompt (Admin)
+|  |  |     |--If Command Prompt (Admin) is replaced by Powershell:
+|  |  |        |--Windows+I
+|  |  |        |--'Personalization'
+|  |  |        |--'Taskbar'
+|  |  |        |--Replace Command Prompt with Windows PowerShell in the menu when I right-click the start button or press Windows key + X
+|  |  |           |--Toggle to 'Off', return Windows+X
+|  |  |--Run the appropriate Chocolatey command
+|  |     |--Not included here; refer to source documentation on site for latest version.
+|  |--NuGet
+|  |  |--https://www.nuget.org/
+|  |--Scoop
+|     |--https://scoop.sh/
+|
+|--Close and restart the command prompt if necessary
+
+Use the Package Manager to install Git:
+|--With Chocolatey
+   |--Open an administrative command prompt
+   |  |--Windows+X
+   |  |--Enter the relevant command
+   |     |--choco install git -params '"/GitAndUnixToolsOnPath"'
+   |     |--Confirm against documentation: May have changed since last update
+   |--Git installed!
+   |--Close and reopen command prompt to effect changes
+
+Use Git to Clone a repository:
+|--May require authentication in the form of an SSH key pair
+   |--https://en.wikipedia.org/wiki/Secure_Shell
+|--Open a command prompt
+|--Enter the relevant command
+   |--> git clone <HTTP address goes here>
+      |--Address may not contain special characters, must be URL formatted
