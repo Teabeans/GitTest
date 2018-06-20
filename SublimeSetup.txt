@@ -7,9 +7,10 @@ Sublime Text 3 - Initial Setup
 |
 |--To open the Side Bar:
 |  |--Click 'View'
+|  |--'Sidebar'
 |  |--'Show Open Files'
 |
-|--To open the Package Manager in order to install additional packages...
+|--To open the Package Manager in order to install additional packages:
 |  |--Press Ctrl + Shift + P
 |  |--Select Package Control : Install Package
 |
@@ -21,9 +22,9 @@ Sublime Text 3 - Initial Setup
 |  |  |--Improves the appearance of Sublime Text
 |  |--SideBarEnhancements
 |  |  |--
-|  |--Advanced New File
+|  |--AdvancedNewFile
 |  |--GitGutter
-|  |--Dockblkr
+|  |--DocBlockr
 |  |--SublimeLint
       |--Various flavors - Find the one for what you're writing in
 |
@@ -44,7 +45,10 @@ Sublime Text 3 - Initial Setup
 |  |--Select Material Theme: Configuration
 |
 |--To acquire additional fonts
-|  |--$ sudo apt get install ttf-google-fonts-git
+|  |--$ sudo apt-get install ttf-google-fonts-git
+|  |--To link to the Google Font Git repository
+      |--Install Git
+         |--$ sudo apt install git
 |
 |--To adjust visual settings of Sublime Text:
 |  |--Preferences => Settings
